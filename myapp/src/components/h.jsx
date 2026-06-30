@@ -246,12 +246,13 @@ function Hero() {
   const timerRef = useRef(null);
 
   // Auto-advance slider
-  useEffect(() => {
-    timerRef.current = setInterval(() => {
-      goTo((prev) => (prev + 1) % SLIDES.length);
-    }, 5000);
-    return () => clearInterval(timerRef.current);
-  }, []);
+useEffect(() => {
+  timerRef.current = setInterval(() => {
+    setCurrent((prev) => (prev + 1) % SLIDES.length);
+  }, 5000);
+
+  return () => clearInterval(timerRef.current);
+}, []);
 
   function goTo(idxOrFn) {
     setAnimating(true);
@@ -491,7 +492,7 @@ function useInView(threshold = 0.1) {
     const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold });
     if (ref.current) o.observe(ref.current);
     return () => o.disconnect();
-  }, []);
+  }, [threshold]);
   return [ref, vis];
 }
 
