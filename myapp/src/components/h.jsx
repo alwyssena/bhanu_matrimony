@@ -61,6 +61,8 @@
 
 
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+
 import  ContactUs  from "./pages/contact/contact";
 import PricingPackages from "./pages/membership/membership";
 import SaptapadiSection from "./pages/7steps/sevensteps";
@@ -181,7 +183,7 @@ function Navbar() {
       <ul style={{ display: "flex", gap: "2.5rem", listStyle: "none", margin: 0, padding: 0 }}>
         {["Home", "About Us", "Contact Us"].map((l, i) => (
           <li key={l}>
-            <a href="#" style={{
+            <Link to={l === "Home" ? "/" : l === "About Us" ? "/about" : "/contact"} style={{
               fontFamily: "'Nunito', sans-serif", fontSize: "0.95rem",
               fontWeight: i === 0 ? 700 : 500,
               color: i === 0 ? "#8b1a3a" : "#333",
@@ -190,7 +192,7 @@ function Navbar() {
             }}
               onMouseEnter={e => e.target.style.color = "#8b1a3a"}
               onMouseLeave={e => e.target.style.color = i === 0 ? "#8b1a3a" : "#333"}
-            >{l}</a>
+            >{l}</Link>
           </li>
         ))}
       </ul>
@@ -415,19 +417,19 @@ function Hero() {
 
           {/* Footer links */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
-            <a href="#" style={{
+            <Link to="/forgot-password" style={{
               fontFamily: "'Nunito', sans-serif", fontSize: "0.82rem",
               color: "#d97706", textDecoration: "none", fontWeight: 600,
             }}
               onMouseEnter={e => e.target.style.textDecoration = "underline"}
               onMouseLeave={e => e.target.style.textDecoration = "none"}
-            >Forgot Password?</a>
+            >Forgot Password?</Link>
             <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.82rem", color: "#6b7280" }}>
               Don't have an account?{" "}
-              <a href="#" style={{ color: "#16a34a", fontWeight: 700, textDecoration: "none" }}
+              <Link to="/register" style={{ color: "#16a34a", fontWeight: 700, textDecoration: "none" }}
                 onMouseEnter={e => e.target.style.textDecoration = "underline"}
                 onMouseLeave={e => e.target.style.textDecoration = "none"}
-              >Register Free</a>
+              >Register Free</Link>
             </span>
           </div>
         </div>
@@ -738,10 +740,10 @@ function Footer() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
                 {col.links.map(l => (
                   <li key={l} style={{ marginBottom: "0.45rem" }}>
-                    <a href="#" style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", textDecoration: "none", transition: "color 0.2s" }}
+                    <Link to={l === "Home" ? "/" : l === "About Us" ? "/about" : l === "Search Profiles" ? "/search" : l === "Register Free" ? "/register" : "/login"} style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", textDecoration: "none", transition: "color 0.2s" }}
                       onMouseEnter={e => e.target.style.color = "#f5c030"}
                       onMouseLeave={e => e.target.style.color = "rgba(255,255,255,0.5)"}
-                    >{l}</a>
+                    >{l}</Link>
                   </li>
                 ))}
               </ul>
@@ -766,7 +768,7 @@ function Footer() {
 // ── WhatsApp FAB ──────────────────────────────────────────────
 function WhatsAppBtn() {
   return (
-    <a href="https://wa.me/917093290288" target="_blank" rel="noopener noreferrer" style={{
+    <Link to="https://wa.me/917093290288" target="_blank" rel="noopener noreferrer" style={{
       position: "fixed", bottom: "1.8rem", right: "1.8rem", zIndex: 999,
       width: 52, height: 52, borderRadius: "50%",
       background: "#25d366",
@@ -774,7 +776,7 @@ function WhatsAppBtn() {
       boxShadow: "0 4px 20px rgba(37,211,102,0.5)",
       fontSize: "1.6rem", textDecoration: "none",
       animation: "waPulse 2s ease infinite",
-    }}>📱</a>
+    }}>📱</Link>
   );
 }
 

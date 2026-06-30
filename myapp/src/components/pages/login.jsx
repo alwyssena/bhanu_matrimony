@@ -491,14 +491,14 @@ export default function Login() {
                 textAlign: "right", marginBottom: "1.5rem",
                 animation: mounted ? "fadeInDown 0.6s ease 0.6s both" : "none",
               }}>
-                <a href="#" style={{
+                <Link to="/forgot-password" style={{
                   fontFamily: "'Nunito', sans-serif", fontSize: "0.78rem",
                   color: "#d97706", textDecoration: "none", fontWeight: 600,
                   transition: "color 0.2s",
                 }}
                   onMouseEnter={e => e.target.style.color = "#f5c030"}
                   onMouseLeave={e => e.target.style.color = "#d97706"}
-                >Forgot Password?</a>
+                >Forgot Password?</Link>
               </div>
 
               {/* ── Submit button — ORIGINAL type="submit" preserved ── */}
@@ -579,7 +579,7 @@ export default function Login() {
                 textAlign: "center",
                 animation: mounted ? "slideUp 0.6s ease 0.8s both" : "none",
               }}>
-                <a href="/register" style={{
+                <Link to="/register" style={{
                   display: "block", width: "100%",
                   background: "transparent",
                   border: "1.5px solid rgba(212,146,42,0.4)",
@@ -600,7 +600,7 @@ export default function Login() {
                     e.currentTarget.style.borderColor = "rgba(212,146,42,0.4)";
                     e.currentTarget.style.boxShadow = "none";
                   }}
-                >💍 CREATE FREE ACCOUNT</a>
+                >💍 CREATE FREE ACCOUNT</Link>
               </div>
             </form>
 

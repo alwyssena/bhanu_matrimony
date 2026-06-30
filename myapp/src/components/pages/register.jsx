@@ -374,9 +374,9 @@ export default function Register() {
         <input type="checkbox" required style={{ marginTop: 3, accentColor: "#d97706", width: 15, height: 15, cursor: "pointer" }} />
         <span style={{ fontFamily: "'Nunito',sans-serif", fontSize: "0.78rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.6 }}>
           I agree to the{" "}
-          <a href="#" style={{ color: "#f5c030", textDecoration: "none" }}>Terms of Service</a>{" "}
+          <Link to="#" style={{ color: "#f5c030", textDecoration: "none" }}>Terms of Service</Link>{" "}
           and{" "}
-          <a href="#" style={{ color: "#f5c030", textDecoration: "none" }}>Privacy Policy</a>
+          <Link to="#" style={{ color: "#f5c030", textDecoration: "none" }}>Privacy Policy</Link  >
           {" "}of Vikshana Matrimony
         </span>
       </label>
@@ -636,14 +636,14 @@ export default function Register() {
                 <span style={{ fontFamily: "'Nunito',sans-serif", fontSize: "0.72rem", color: "rgba(255,255,255,0.3)" }}>Already a member?</span>
                 <div style={{ flex: 1, height: 1, background: "rgba(212,146,42,0.15)" }} />
               </div>
-              <a href="/login" style={{
+              <Link to="/login" style={{
                 fontFamily: "'Cinzel',serif", fontSize: "0.75rem", letterSpacing: "0.12em",
                 color: "#f5c030", textDecoration: "none",
                 transition: "color 0.2s",
               }}
                 onMouseEnter={e => e.target.style.color = "#fff"}
                 onMouseLeave={e => e.target.style.color = "#f5c030"}
-              >SIGN IN TO YOUR ACCOUNT →</a>
+              >SIGN IN TO YOUR ACCOUNT →</Link  >
             </div>
 
             {/* Bottom hearts */}

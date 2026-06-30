@@ -28,7 +28,7 @@ function SplashScreen() {
 
         return () => clearTimeout(timeout);
 
-    }, []);
+    }, [navigate]);
 
     return (
         <VikshanaMatrimony />

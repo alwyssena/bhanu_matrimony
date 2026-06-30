@@ -333,9 +333,9 @@ export default function ContactUs() {
           <span style={{ color: "#e74c3c" }}>Vikshana</span>&nbsp;Matrimony
         </div>
         <ul style={styles.navLinks}>
-          <li><a href="/" style={styles.navLink}>Home</a></li>
-          <li><a href="/about" style={styles.navLink}>About Us</a></li>
-          <li><a href="/contact" style={styles.navLinkActive}>Contact Us</a></li>
+          <li><Link to="/" style={styles.navLink}>Home</Link></li>
+          <li><Link to="/about" style={styles.navLink}>About Us</Link></li>
+          <li><Link to="/contact" style={styles.navLinkActive}>Contact Us</Link></li>
         </ul>
         <div style={styles.navBtns}>
           <button style={styles.btnRegister}>Register Now</button>
@@ -443,7 +443,9 @@ export default function ContactUs() {
           <div>
             <h3 style={styles.footerH3}>Quick Links</h3>
             {["Home", "About Us", "Contact Us", "Register"].map((l) => (
-              <a key={l} href="#" style={styles.footerLink}>{l}</a>
+              <Link key={l} to={l === "Home" ? "/" : l === "About Us" ? "/about" : l === "Contact Us" ? "/contact" : "/register"} style={styles.footerLink}>
+                {l}
+              </Link>
             ))}
           </div>
           <div>
@@ -455,7 +457,7 @@ export default function ContactUs() {
           <div>
             <h3 style={styles.footerH3}>Follow Us</h3>
             {["Facebook", "Instagram", "Twitter"].map((s) => (
-              <a key={s} href="#" style={styles.footerLink}>{s}</a>
+              <Link key={s} to="#" style={styles.footerLink}>{s}</Link>
             ))}
           </div>
         </div>
