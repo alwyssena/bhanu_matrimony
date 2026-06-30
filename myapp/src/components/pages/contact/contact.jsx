@@ -287,19 +287,19 @@ const infoItems = [
     icon: "📍",
     bg: "#dbeafe",
     title: "Address",
-    content: "2/674, Skd nagar, Tirupati Bypass (chittor road)\nTirupati, Andhra Pradesh – 517214, India",
+    content: "Skd nagar, Chittor road ,\nPiller, Andhra Pradesh – 517214, India",
   },
   {
     icon: "📞",
     bg: "#dcfce7",
     title: "Phone",
-    content: "+91 8179574652\n+91 7093290288",
+    content: "+91 8179574652",
   },
   {
     icon: "✉️",
     bg: "#fef3c7",
     title: "Email",
-    content: "info@bhanumatrimony.com",
+    content: "slvmatrimony288@gmail.com",
   },
   {
     icon: "🕐",
@@ -436,7 +436,7 @@ export default function ContactUs() {
       <footer style={styles.footer}>
         <div style={styles.footerGrid}>
           <div>
-            <h3 style={styles.footerH3}>Venkateswara Marriage Bureau</h3>
+            <h3 style={styles.footerH3}>Sri Lakshmi Venkateswara Matrimony</h3>
             <p style={{ fontSize: "13px", color: "#888", lineHeight: 1.6 }}>
               Connecting hearts, building families. Find your perfect life partner with us.
             </p>
@@ -451,9 +451,16 @@ export default function ContactUs() {
           </div>
           <div>
             <h3 style={styles.footerH3}>Contact Us</h3>
-            <p style={styles.footerLink}>📍 Tirupati, Andhra Pradesh</p>
-            <p style={styles.footerLink}>📞 +91 8179574652</p>
-            <p style={styles.footerLink}>✉️ info@Venkateswara Marriage Bureau.com</p>
+            <p style={styles.footerLink}>📍SKD Nagar ,Chittor Road, Piller ,Andhra Pradesh</p>
+          <a href="tel:+918179574652" style={styles.footerLink}>
+  📞 +91 8179574652
+</a>
+    <a
+  href="mailto:slvmatrimony288@gmail.com?subject=Inquiry%20from%20Website&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20matrimony%20services."
+  style={styles.footerLink}
+>
+  ✉️ slvmatrimony288@gmail.com
+</a>
           </div>
           <div>
             <h3 style={styles.footerH3}>Follow Us</h3>
@@ -462,7 +469,7 @@ export default function ContactUs() {
             ))}
           </div>
         </div>
-        <div style={styles.footerBottom}>© 2026 Venkateswara Marriage Bureau. All rights reserved.</div>
+        <div style={styles.footerBottom}>© 2026 Sri Lakshmi Venkateswara Matrimony. All rights reserved.</div>
       </footer>
     </div>
   );

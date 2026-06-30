@@ -62,10 +62,10 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-
+import MusicPlayer from "./pages/musicplayer/mymusic";
 import  ContactUs  from "./pages/contact/contact";
 import PricingPackages from "./pages/membership/membership";
-import SaptapadiSection from "./pages/7steps/sevensteps";
+
 import ProfilesGallery from "./pages/users/users";
 import  WhyVenkateswaraMarriageBureau from "./pages/why/why";
 import InfiniteSlider from "./pages/slides/infiniteslider";
@@ -158,7 +158,7 @@ function Navbar() {
   >
     <img
       src="/photos/logo.png"
-      alt="Venkateswara Marriage Bureau"
+      alt="Sri Lakshmi Venkateswara Matrimony"
       style={{
         width: "100%",
         height: "100%",
@@ -174,8 +174,8 @@ function Navbar() {
       fontWeight: 700,
     }}
   >
-    <span style={{ color: "#8b1a3a" }}>Venkateswara </span>
-    <span style={{ color: "#1a1a1a" }}>Marriage Bureau</span>
+    <span style={{ color: "#8b1a3a" }}>S L V </span>
+    <span style={{ color: "#1a1a1a" }}>Matrimony</span>
   </span>
 </div>
 
@@ -336,7 +336,7 @@ useEffect(() => {
           opacity: animating ? 0 : 1,
           transition: "opacity 0.5s ease 0.1s",
         }}>
-          Join thousands of families who have found their perfect match through Venkateswara Marriage Bureau. Your journey to a beautiful marriage begins here, rooted in tradition and trust.
+          Join thousands of families who have found their perfect match through Sri Lakshmi Venkateswara Matrimony. Your journey to a beautiful marriage begins here, rooted in tradition and trust.
         </p>
 
         {/* ── Login Card ── */}
@@ -550,140 +550,12 @@ function HowItWorks() {
   );
 }
 
-// ── Featured Profiles ─────────────────────────────────────────
-const PROFILES = [
-  { name: "Priya Sharma", age: 26, city: "Hyderabad", edu: "MBA Finance", height: "5'4\"", avatar: "👩‍🦱", tag: "New", tagColor: "#8b1a3a" },
-  { name: "Arjun Reddy", age: 29, city: "Bangalore", edu: "B.Tech IT", height: "5'11\"", avatar: "👨", tag: "Verified", tagColor: "#16a34a" },
-  { name: "Sneha Patel", age: 24, city: "Mumbai", edu: "MBBS Doctor", height: "5'3\"", avatar: "👩", tag: "Premium", tagColor: "#d97706" },
-  { name: "Karthik Nair", age: 31, city: "Chennai", edu: "CA", height: "5'9\"", avatar: "🧑", tag: "New", tagColor: "#8b1a3a" },
-  { name: "Divya Rao", age: 27, city: "Pune", edu: "M.Tech CSE", height: "5'5\"", avatar: "👩‍🦰", tag: "Verified", tagColor: "#16a34a" },
-  { name: "Rahul Gupta", age: 28, city: "Delhi", edu: "LLB Lawyer", height: "5'10\"", avatar: "👨‍💼", tag: "Premium", tagColor: "#d97706" },
-];
 
-function ProfileCard({ p, delay }) {
-  const [ref, vis] = useInView(0.05);
-  const [liked, setLiked] = useState(false);
-  return (
-    <div ref={ref} style={{
-      background: "#fff", borderRadius: 12,
-      border: "1px solid #f0e0d0", overflow: "hidden",
-      boxShadow: "0 4px 16px rgba(0,0,0,0.07)",
-      opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(30px)",
-      transition: `all 0.6s ease ${delay}s`,
-      cursor: "pointer",
-    }}
-      onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 12px 40px rgba(139,26,58,0.2)"; e.currentTarget.style.transform = "translateY(-5px)"; }}
-      onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 4px 16px rgba(0,0,0,0.07)"; e.currentTarget.style.transform = "translateY(0)"; }}
-    >
-      <div style={{
-        height: 160, background: "linear-gradient(135deg, #8b1a3a 0%, #c43060 50%, #d97706 100%)",
-        display: "flex", alignItems: "center", justifyContent: "center", position: "relative",
-      }}>
-        <span style={{ fontSize: "4.5rem" }}>{p.avatar}</span>
-        <span style={{
-          position: "absolute", top: 10, right: 10,
-          background: p.tagColor, color: "#fff",
-          fontFamily: "'Nunito', sans-serif", fontSize: "0.65rem", fontWeight: 800,
-          padding: "0.2rem 0.6rem", borderRadius: 4, letterSpacing: "0.05em",
-        }}>{p.tag}</span>
-        <button onClick={() => setLiked(!liked)} style={{
-          position: "absolute", top: 8, left: 8,
-          background: "rgba(255,255,255,0.2)", border: "none",
-          borderRadius: "50%", width: 30, height: 30,
-          fontSize: "0.85rem", cursor: "pointer",
-        }}>{liked ? "❤️" : "🤍"}</button>
-      </div>
-      <div style={{ padding: "1rem 1.1rem" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.3rem" }}>
-          <h4 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1rem", fontWeight: 700, color: "#1a1a1a" }}>{p.name}</h4>
-          <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.82rem", color: "#6b7280" }}>{p.age} yrs</span>
-        </div>
-        <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.82rem", color: "#6b7280", marginBottom: "0.7rem" }}>
-          📍 {p.city} &nbsp;·&nbsp; 📏 {p.height}
-        </p>
-        <span style={{
-          display: "inline-block",
-          background: "#fff5e8", border: "1px solid #f0c080",
-          color: "#b45309", fontFamily: "'Nunito', sans-serif",
-          fontSize: "0.7rem", fontWeight: 600, letterSpacing: "0.04em",
-          padding: "0.2rem 0.6rem", borderRadius: 4, marginBottom: "0.8rem",
-        }}>{p.edu}</span>
-        <button style={{
-          width: "100%",
-          background: "linear-gradient(135deg, #8b1a3a, #c43060)",
-          color: "#fff", border: "none", borderRadius: 6,
-          padding: "0.55rem", fontFamily: "'Nunito', sans-serif",
-          fontSize: "0.78rem", fontWeight: 700, cursor: "pointer",
-          transition: "opacity 0.2s",
-        }}
-          onMouseEnter={e => e.currentTarget.style.opacity = "0.85"}
-          onMouseLeave={e => e.currentTarget.style.opacity = "1"}
-        >View Profile →</button>
-      </div>
-    </div>
-  );
-}
 
-function FeaturedProfiles() {
-  return (
-    <section style={{ background: "#fff", padding: "5rem 2rem" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <SectionHeader tag="Find Your Match" title="Featured Profiles" />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: "1.5rem" }}>
-          {PROFILES.map((p, i) => <ProfileCard key={p.name} p={p} delay={i * 0.08} />)}
-        </div>
-        <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-          <button style={{
-            background: "transparent", border: "2px solid #8b1a3a",
-            color: "#8b1a3a", padding: "0.75rem 2.5rem", borderRadius: 6,
-            fontFamily: "'Nunito', sans-serif", fontSize: "0.9rem", fontWeight: 700,
-            cursor: "pointer", transition: "all 0.25s",
-          }}
-            onMouseEnter={e => { e.currentTarget.style.background = "#8b1a3a"; e.currentTarget.style.color = "#fff"; }}
-            onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#8b1a3a"; }}
-          >View All Profiles →</button>
-        </div>
-      </div>
-    </section>
-  );
-}
 
-// ── Success Stories ───────────────────────────────────────────
-const STORIES = [
-  { names: "Rahul & Anjali", city: "Hyderabad", year: "2024", quote: "We matched on Bhanu and knew instantly. Our families met and it was absolutely perfect!", img: "💑" },
-  { names: "Vikram & Pooja", city: "Bangalore", year: "2024", quote: "After 3 months of chatting we finally met in person. Best decision of our entire lives!", img: "👫" },
-  { names: "Arun & Meena", city: "Chennai", year: "2023", quote: "Bhanu's algorithm found us — we share so many values and traditions. Forever grateful!", img: "💏" },
-];
 
-function SuccessStories() {
-  const [ref, vis] = useInView(0.1);
-  return (
-    <section style={{ background: "linear-gradient(135deg, #3d0818 0%, #6b0f2a 50%, #3d0818 100%)", padding: "5rem 2rem" }}>
-      <div style={{ maxWidth: 1100, margin: "0 auto" }} ref={ref}>
-        <SectionHeader tag="Love Stories" title="Happy Couples" light />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-          {STORIES.map((s, i) => (
-            <div key={s.names} style={{
-              background: "rgba(255,255,255,0.07)", backdropFilter: "blur(10px)",
-              border: "1px solid rgba(245,192,48,0.25)", borderRadius: 12,
-              padding: "2rem", textAlign: "center",
-              opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(30px)",
-              transition: `all 0.7s ease ${i * 0.12}s`,
-            }}>
-              <div style={{ fontSize: "3.5rem", marginBottom: "1rem" }}>{s.img}</div>
-              <h4 style={{ fontFamily: "'Playfair Display', serif", color: "#f5c030", fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.3rem" }}>{s.names}</h4>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.72rem", color: "rgba(255,255,255,0.5)", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>{s.city} · {s.year}</p>
-              <p style={{ fontFamily: "'Nunito', sans-serif", fontStyle: "italic", fontSize: "0.9rem", color: "rgba(255,255,255,0.8)", lineHeight: 1.75 }}>"{s.quote}"</p>
-              <div style={{ display: "flex", justifyContent: "center", gap: "2px", marginTop: "1rem" }}>
-                {[1,2,3,4,5].map(n => <span key={n} style={{ color: "#f5c030" }}>★</span>)}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
+
 
 // ── CTA Banner ────────────────────────────────────────────────
 function CTABanner() {
@@ -699,7 +571,7 @@ function CTABanner() {
         Find Your Perfect Life Partner
       </h2>
       <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.85)", maxWidth: 500, margin: "0 auto 2rem", lineHeight: 1.7 }}>
-        Register for free today and begin your journey towards a beautiful marriage with Venkateswara Marriage Bureau.
+        Register for free today and begin your journey towards a beautiful marriage with Sri Lakshmi Venkateswara Matrimony.
       </p>
       <button style={{
         background: "#fff", color: "#8b1a3a", border: "none", borderRadius: 8,
@@ -725,7 +597,7 @@ function Footer() {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1rem" }}>
               <span style={{ fontSize: "1.2rem" }}>💍</span>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 700, color: "#f5c030" }}>Venkateswara Marriage Bureau</span>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 700, color: "#f5c030" }}>Sri Lakshmi Venkateswara Matrimony</span>
             </div>
             <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.7 }}>
               Where hearts find home. Trusted matrimony platform connecting families since 2026.
@@ -753,7 +625,7 @@ function Footer() {
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "1.2rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.8rem" }}>
           <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.78rem", color: "rgba(255,255,255,0.3)" }}>
-            © 2026 Venkateswara Marriage Bureau. All Rights Reserved.
+            © 2026 Sri Lakshmi Venkateswara Matrimony. All Rights Reserved.
           </p>
           <div style={{ display: "flex", gap: "0.4rem" }}>
             {["❤️","❤️","❤️"].map((h,i) => (
@@ -813,17 +685,19 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        
         <StatsBar />
         <HowItWorks />
-        <SaptapadiSection/>
-        <FeaturedProfiles />
-        <SuccessStories />
+        
+        
+        
         <ProfilesGallery />
         <InfiniteSlider />
         <CTABanner />
       </main>
       <PricingPackages />
 <ContactUs />
+<MusicPlayer/>
 <WhyVenkateswaraMarriageBureau />
       <Footer />
       <WhatsAppBtn />
