@@ -65,7 +65,8 @@ import  ContactUs  from "./pages/contact/contact";
 import PricingPackages from "./pages/membership/membership";
 import SaptapadiSection from "./pages/7steps/sevensteps";
 import ProfilesGallery from "./pages/users/users";
-import  WhyVikshana  from "./pages/why/why";
+import  WhyVenkateswaraMarriageBureau from "./pages/why/why";
+import InfiniteSlider from "./pages/slides/infiniteslider";
 
 /* ============================================================
    VIKSHANA MATRIMONY — Exact Homepage Recreation
@@ -139,18 +140,42 @@ function Navbar() {
       height: 64,
     }}>
       {/* Logo */}
-      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-        <div style={{
-          width: 36, height: 36, borderRadius: "50%",
-          border: "2px solid #d4922a",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          fontSize: "1rem",
-        }}>💍</div>
-        <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.3rem", fontWeight: 700 }}>
-          <span style={{ color: "#8b1a3a" }}>Bhanu</span>
-          <span style={{ color: "#1a1a1a" }}> Matrimony</span>
-        </span>
-      </div>
+    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+  <div
+    style={{
+      width: "50px",
+      height: "50px",
+      borderRadius: "50%",
+      overflow: "hidden",
+      border: "2px solid #d4922a",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#fff",
+    }}
+  >
+    <img
+      src="/photos/logo.png"
+      alt="Venkateswara Marriage Bureau"
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "contain",
+      }}
+    />
+  </div>
+
+  <span
+    style={{
+      fontFamily: "'Playfair Display', serif",
+      fontSize: "1.3rem",
+      fontWeight: 700,
+    }}
+  >
+    <span style={{ color: "#8b1a3a" }}>Venkateswara </span>
+    <span style={{ color: "#1a1a1a" }}>Marriage Bureau</span>
+  </span>
+</div>
 
       {/* Nav links */}
       <ul style={{ display: "flex", gap: "2.5rem", listStyle: "none", margin: 0, padding: 0 }}>
@@ -308,8 +333,7 @@ function Hero() {
           opacity: animating ? 0 : 1,
           transition: "opacity 0.5s ease 0.1s",
         }}>
-          Join thousands of families who have found their perfect match through Vikshana
-          Matrimony. Your journey to a beautiful marriage begins here, rooted in tradition and trust.
+          Join thousands of families who have found their perfect match through Venkateswara Marriage Bureau. Your journey to a beautiful marriage begins here, rooted in tradition and trust.
         </p>
 
         {/* ── Login Card ── */}
@@ -623,9 +647,9 @@ function FeaturedProfiles() {
 
 // ── Success Stories ───────────────────────────────────────────
 const STORIES = [
-  { names: "Rahul & Anjali", city: "Hyderabad", year: "2024", quote: "We matched on Vikshana and knew instantly. Our families met and it was absolutely perfect!", img: "💑" },
+  { names: "Rahul & Anjali", city: "Hyderabad", year: "2024", quote: "We matched on Bhanu and knew instantly. Our families met and it was absolutely perfect!", img: "💑" },
   { names: "Vikram & Pooja", city: "Bangalore", year: "2024", quote: "After 3 months of chatting we finally met in person. Best decision of our entire lives!", img: "👫" },
-  { names: "Arun & Meena", city: "Chennai", year: "2023", quote: "Vikshana's algorithm found us — we share so many values and traditions. Forever grateful!", img: "💏" },
+  { names: "Arun & Meena", city: "Chennai", year: "2023", quote: "Bhanu's algorithm found us — we share so many values and traditions. Forever grateful!", img: "💏" },
 ];
 
 function SuccessStories() {
@@ -672,7 +696,7 @@ function CTABanner() {
         Find Your Perfect Life Partner
       </h2>
       <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.85)", maxWidth: 500, margin: "0 auto 2rem", lineHeight: 1.7 }}>
-        Register for free today and begin your journey towards a beautiful marriage with Vikshana Matrimony.
+        Register for free today and begin your journey towards a beautiful marriage with Venkateswara Marriage Bureau.
       </p>
       <button style={{
         background: "#fff", color: "#8b1a3a", border: "none", borderRadius: 8,
@@ -687,6 +711,8 @@ function CTABanner() {
   );
 }
 
+
+
 // ── Footer ────────────────────────────────────────────────────
 function Footer() {
   return (
@@ -696,10 +722,10 @@ function Footer() {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1rem" }}>
               <span style={{ fontSize: "1.2rem" }}>💍</span>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 700, color: "#f5c030" }}>Vikshana Matrimony</span>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 700, color: "#f5c030" }}>Venkateswara Marriage Bureau</span>
             </div>
             <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.85rem", color: "rgba(255,255,255,0.5)", lineHeight: 1.7 }}>
-              Where hearts find home. Trusted matrimony platform connecting families since 2009.
+              Where hearts find home. Trusted matrimony platform connecting families since 2026.
             </p>
           </div>
           {[
@@ -724,7 +750,7 @@ function Footer() {
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: "1.2rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.8rem" }}>
           <p style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.78rem", color: "rgba(255,255,255,0.3)" }}>
-            © 2026 Vikshana Matrimony. All Rights Reserved.
+            © 2026 Venkateswara Marriage Bureau. All Rights Reserved.
           </p>
           <div style={{ display: "flex", gap: "0.4rem" }}>
             {["❤️","❤️","❤️"].map((h,i) => (
@@ -740,7 +766,7 @@ function Footer() {
 // ── WhatsApp FAB ──────────────────────────────────────────────
 function WhatsAppBtn() {
   return (
-    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" style={{
+    <a href="https://wa.me/917093290288" target="_blank" rel="noopener noreferrer" style={{
       position: "fixed", bottom: "1.8rem", right: "1.8rem", zIndex: 999,
       width: 52, height: 52, borderRadius: "50%",
       background: "#25d366",
@@ -790,11 +816,12 @@ export default function Home() {
         <FeaturedProfiles />
         <SuccessStories />
         <ProfilesGallery />
+        <InfiniteSlider />
         <CTABanner />
       </main>
       <PricingPackages />
 <ContactUs />
-<WhyVikshana />
+<WhyVenkateswaraMarriageBureau />
       <Footer />
       <WhatsAppBtn />
     </>

@@ -10,7 +10,7 @@ const plans = [
     badge: null,
     tabs: ["1 Month", "3 Months", "6 Months"],
     defaultTab: 0,
-    prices: { "1 Month": "₹7,000", "3 Months": "₹18,000", "6 Months": "₹30,000" },
+    prices: { "1 Month": "₹5,000", "3 Months": "₹15,000", "6 Months": "₹25,000" },
     period: { "1 Month": "/ 1 Month", "3 Months": "/ 3 Months", "6 Months": "/ 6 Months" },
     features: [
       { text: "Dedicated Relationship Manager", included: true },
@@ -38,7 +38,7 @@ const plans = [
     badge: { label: "Popular", bg: "#fd7e14" },
     tabs: ["3 Months", "6 Months", "1 Year"],
     defaultTab: 0,
-    prices: { "3 Months": "₹25,000", "6 Months": "₹45,000", "1 Year": "₹80,000" },
+    prices: { "3 Months": "₹25,000", "6 Months": "₹45,000", "1 Year": "₹70,000" },
     period: { "3 Months": "/ 3 Months", "6 Months": "/ 6 Months", "1 Year": "/ 1 Year" },
     features: [
       { text: "Affluent Family Profiles", included: true },
@@ -64,7 +64,7 @@ const plans = [
     badge: { label: "Recommended", bg: "#9b59b6" },
     tabs: [],
     defaultTab: null,
-    prices: { default: "₹1,00,000" },
+    prices: { default: "₹85,000" },
     period: { default: "/ One Time" },
     features: [
       { text: "Rich and Affluent Matches", included: true },
