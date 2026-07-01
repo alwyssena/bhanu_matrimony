@@ -641,7 +641,7 @@ function Footer() {
 // ── WhatsApp FAB ──────────────────────────────────────────────
 function WhatsAppBtn() {
   return (
-    <Link to="https://wa.me/917093290288" target="_blank" rel="noopener noreferrer" style={{
+    <Link to="https://wa.me/918179574652" target="_blank" rel="noopener noreferrer" style={{
       position: "fixed", bottom: "1.8rem", right: "1.8rem", zIndex: 999,
       width: 52, height: 52, borderRadius: "50%",
       background: "#25d366",
