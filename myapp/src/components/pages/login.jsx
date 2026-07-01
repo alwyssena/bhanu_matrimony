@@ -377,7 +377,7 @@ export default function Login() {
                 fontSize: "1.6rem", fontWeight: 900,
                 lineHeight: 1.1, marginBottom: "0.3rem",
               }}>
-                <span style={{ color: "#f5c030" }}>Vikshana</span>{" "}
+                <span style={{ color: "#f5c030" }}>S L V</span>{" "}
                 <span style={{ color: "#fff" }}>Matrimony</span>
               </h1>
 
@@ -569,7 +569,7 @@ export default function Login() {
               }}>
                 <div style={{ flex: 1, height: 1, background: "rgba(212,146,42,0.2)" }} />
                 <span style={{ fontFamily: "'Nunito', sans-serif", fontSize: "0.72rem", color: "rgba(255,255,255,0.3)", whiteSpace: "nowrap" }}>
-                  New to Vikshana?
+                  New to SLV?
                 </span>
                 <div style={{ flex: 1, height: 1, background: "rgba(212,146,42,0.2)" }} />
               </div>
