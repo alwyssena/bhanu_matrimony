@@ -221,7 +221,7 @@ function ProfileCard({ person, type }) {
       <div style={S.cardBody}>
         <p style={S.cardName}>{person.name}</p>
         <p style={S.cardMeta}>
-          {person.age} yrs · {person.city}
+          {person.age} · {person.city}
         </p>
         <p style={{ ...S.cardMeta, marginBottom: "8px" }}>{person.profession}</p>
         <span style={type === "bride" ? S.tagBride : S.tagGroom}>
