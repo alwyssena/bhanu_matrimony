@@ -308,7 +308,7 @@ export default function VikshanaMatrimony() {
               letterSpacing: "0.04em",
               fontWeight: 400,
             }}>
-              Waiting for Someone Special...!
+              To unite hearts & souls together to shine forever
             </p>
           )}
 
