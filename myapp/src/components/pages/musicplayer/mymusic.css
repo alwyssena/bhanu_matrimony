@@ -1,0 +1,18 @@
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 9999;
+  box-shadow: 0 5px 15px rgba(0,0,0,.3);
+}
+
+.music-btn:hover {
+  background: #c2185b;
+}

@@ -24,7 +24,7 @@ function SplashScreen() {
 
             navigate("/home");
 
-        }, 2000);
+        }, 10000);
 
         return () => clearTimeout(timeout);
 

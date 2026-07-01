@@ -250,6 +250,15 @@ export default function VikshanaMatrimony() {
               }} />
             </div>
           )}
+           <img
+      src="/photos/logo.png"
+      alt="Sri Lakshmi Venkateswara Matrimony"
+      style={{
+        width: "10%",
+        height: "10%",
+        objectFit: "contain",
+      }}
+    />
 
           {/* WELCOME TO */}
           {phase >= 2 && (
@@ -284,7 +293,7 @@ export default function VikshanaMatrimony() {
               textShadow: "none",
               filter: "drop-shadow(0 0 30px rgba(240,160,30,0.35))",
             }}>
-              Bhanu's Matrimony
+              S L V Matrimony
             </h1>
           )}
 

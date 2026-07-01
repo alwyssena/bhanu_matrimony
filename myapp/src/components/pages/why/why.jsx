@@ -156,7 +156,7 @@ export default function WhyVenkateswaraMarriageBureau() {
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
-      <div style={S.badge}>Why Venkateswara Marriage Bureau</div>
+      <div style={S.badge}>Why Sri Lakshmi Venkateswara Matrimony</div>
       <h2 style={S.heading}>
         Built on Trust.<br />
         Built with Care.<br />
